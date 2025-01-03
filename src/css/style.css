@@ -1,0 +1,637 @@
+
+ 
+ /* Genel body ayarları */
+body {
+    padding: 1rem; /* Tüm sayfaya 1rem boşluk ekler */
+    background-color: black; /* Sayfa arka planını siyah yapar */
+    margin: 0; /* Varsayılan margin değerini sıfırlar */
+    position: relative; /* Elemanları göreceli pozisyonda düzenler */
+    overflow-x: hidden; /* Yatay kaydırmayı engeller */
+}
+
+/* main ve footer alanlarına padding ekler */
+main, footer {
+    padding: 1rem;
+}
+
+/* wrap id'sine sahip elementin stilini ayarlar */
+#wrap {
+    max-width: 100%; /* Maksimum genişlik %100 */
+    margin: 0 auto; /* Ortalar */
+    margin-top: 1rem; /* Üst tarafta 1rem boşluk bırakır */
+    display: flex; /* Flexbox düzenini kullanır */
+    flex-direction: column; /* Flex öğelerini dikey olarak yerleştirir */
+    justify-content: space-between; /* İçerikleri aralarında eşit boşluk olacak şekilde yerleştirir */
+    row-gap: 2rem; /* Dikeydeki boşluğu 2rem yapar */
+}
+
+/* .flex sınıfına sahip elemanları flex yapar */
+.flex {
+    display: flex; /* Flexbox düzenini kullanır */
+    justify-content: space-between; /* Elemanları yatayda aralarına boşluk bırakarak yerleştirir */
+    align-items: center; /* Elemanları dikeyde ortalar */
+}
+
+/* header elementine padding ekler */
+header {
+    padding: 1rem;
+}
+
+/* .logo sınıfındaki elemanın yüksekliğini belirler */
+header .logo {
+    height: 30px;
+}
+
+/* header içindeki nav öğesinin stilini ayarlar */
+header nav {
+    gap: 3rem; /* Elemanlar arasında 3rem boşluk bırakır */
+}
+
+/* navigation linkleri için stil */
+header nav a {
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+    color: white; /* Yazıyı beyaz yapar */
+    cursor: pointer; /* Fare simgesini işaretçi yapar */
+}
+
+/* navigation linklerinin üzerine gelindiğinde renk değişir */
+header nav a:hover {
+    color: red; /* Linklerin üzerine gelindiğinde renk kırmızı olur */
+}
+
+/* .right sınıfına sahip elemanlar arasında boşluk bırakır */
+header .right {
+    gap:1rem;
+}
+
+/* arama simgesi için stil */
+header .right .search {
+    position: relative; /* Arama simgesini konumlandırırken bir referans alır */
+}
+
+/* arama simgesinin stilini belirler */
+header .right .search i {
+    position: absolute; /* Arama simgesini konumlandırır */
+    right: 0; /* Sağ tarafa hizalar */
+    top: 50%; /* Yukarıdan %50 hizalar */
+    transform: translateY(-50%); /* Dikeyde tam ortalar */
+    cursor: pointer; /* Fare simgesini işaretçi yapar */
+}
+
+/* profil için stil */
+header .right .profile {
+    gap:1rem; /* Profil elemanları arasına boşluk bırakır */
+    cursor: pointer; /* Fare simgesini işaretçi yapar */
+    color: white; /* Profil yazısını beyaz yapar */
+}
+
+/* profil resminin stilini belirler */
+header .right .profile img {
+    width: 30px; /* Genişlik 30px */
+    height: 30px; /* Yükseklik 30px */
+    object-fit: cover; /* Resmi kareye sığdırır */
+    border-radius: 50%; /* Yuvarlak hale getirir */
+}
+
+/* Genel liste stilini belirler */
+ul {
+    display: flex; /* Flexbox düzenini kullanır */
+    flex-direction: column; /* Flex öğelerini dikey olarak yerleştirir */
+    align-items:flex-start; /* Öğeleri sola hizalar */
+    list-style-type: none; /* Liste işaretlerini kaldırır */
+    padding-left: 0; /* Soldan boşluk bırakmaz */
+    margin-left: 0; /* Soldan margin bırakmaz */
+}
+
+/* Main bölümüne stil */
+main {
+    height: 100%; /* Yüksekliği %100 yapar */
+    background-image: url("/src/images/got.jpg"); /* Arka plan resmini ekler */
+    background-size: cover; /* Resmi kapsayacak şekilde büyütür */
+    background-position: center; /* Resmi ortalar */
+    background-repeat: no-repeat; /* Resmi tekrarlamaz */
+    color: #fff; /* Yazı rengini beyaz yapar */
+    padding: 2rem; /* Tüm alanlara 2rem boşluk ekler */
+    margin: 0; /* Margin sıfırlanır */
+    display: flex; /* Flexbox düzenini kullanır */
+    justify-content: center; /* İçeriği yatayda ortalar */
+    align-items: center; /* İçeriği dikeyde ortalar */
+}
+
+/* .hero-content sınıfına sahip elementin stilini belirler */
+.hero-content {
+    max-width: 90%; /* Maksimum genişlik %90 */
+    max-height: 100%; /* Maksimum yükseklik %100 */
+    padding: 20px; /* İç boşluk ekler */
+    background: rgba(0, 0, 0, 0.5); /* Yarı saydam siyah arka plan */
+    border-radius: 10px; /* Kenarları yuvarlatır */
+    text-align: center; /* Metni ortalar */
+    z-index: 2; /* Katman sırasını belirler */
+}
+
+/* Movie details için stil */
+.movie-details span {
+    color: red; /* Yazıyı kırmızı yapar */
+    font-weight: bold; /* Yazıyı kalın yapar */
+}
+
+/* Buton için stil */
+.btn {
+    display: inline-flex; /* Inline flex kullanır */
+    background-color: red; /* Arka planı kırmızı yapar */
+    color: white; /* Yazıyı beyaz yapar */
+    padding: 5px 10px; /* İç boşluk ekler */
+    font-size: 1rem; /* Yazı boyutunu 1rem yapar */
+    border: none; /* Kenarlıkları kaldırır */
+    width: 120px; /* Genişliği 120px yapar */
+    border-radius: 5px; /* Kenarları yuvarlatır */
+    vertical-align: middle; /* Dikeyde ortalar */
+    text-align: center; /* Metni ortalar */
+    cursor: pointer; /* Fare simgesini işaretçi yapar */
+    width: fit-content; /* İçeriğe göre genişliği ayarlar */
+}
+
+/* Buton konteyneri için stil */
+.btn-container {
+    display: flex; /* Flexbox düzenini kullanır */
+    gap: 1rem; /* Elemanlar arasında 1rem boşluk bırakır */
+    align-items: center; /* Elemanları dikeyde ortalar */
+}
+
+/* Buton içindeki icon için stil */
+.btn i {
+    margin-right: 0.5rem; /* Icon ile yazı arasında boşluk bırakır */
+}
+
+/* Buton üzerine gelindiğinde stil */
+.btn:hover {
+    cursor: pointer; /* Fareyi işaretçi yapar */
+    color: red; /* Yazıyı kırmızı yapar */
+    background-color: white; /* Arka planı beyaz yapar */
+}
+
+/* Suggestion row için stil */
+.suggestion-row {
+    display: flex; /* Flexbox düzenini kullanır */
+    flex-direction: column; /* Flex öğelerini dikey olarak yerleştirir */
+    row-gap: 1rem; /* Satırlar arasında boşluk bırakır */
+}
+
+/* Suggestion row başlıkları için stil */
+.suggestion-row .s-header {
+    display: flex; /* Flexbox düzenini kullanır */
+    justify-content: space-between; /* Elemanları yatayda eşit mesafeye yerleştirir */
+    align-items: center; /* Elemanları dikeyde ortalar */
+}
+
+/* Suggestion başlıkları için renk değişikliği */
+.suggestion-row .s-header a:hover {
+    color: red; /* Link üzerine gelindiğinde kırmızı olur */
+}
+
+/* Suggestion başlıkları için stil */
+.suggestion-row h2 {
+    font-size: 1rem; /* Yazı boyutunu 1rem yapar */
+    color: white; /* Yazıyı beyaz yapar */
+}
+
+/* Suggestion linkleri için stil */
+.suggestion-row a {
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+    font-size: 0.8rem; /* Yazı boyutunu 0.8rem yapar */
+    color: white; /* Yazıyı beyaz yapar */
+}
+
+/* Suggestion içerikleri için stil */
+.suggestion-content {
+    display: flex; /* Flexbox düzenini kullanır */
+    justify-content: space-between; /* Elemanları yatayda eşit mesafeye yerleştirir */
+    gap:1rem; /* Elemanlar arasında 1rem boşluk bırakır */
+    flex-wrap: wrap; /* Öğeler satır sonunda yeni satıra geçer */
+}
+
+/* Suggestion item'leri için stil */
+.suggestion-content .item {
+    display: flex; /* Flexbox düzenini kullanır */
+    flex-direction: column; /* Flex öğelerini dikey olarak yerleştirir */
+    row-gap: 0.5rem; /* Satırlar arasında 0.5rem boşluk bırakır */
+    width: calc(25% - 1rem); /* Öğeleri %25 genişlikte yerleştirir */
+    height: 300px; /* Yüksekliği 300px yapar */
+    box-shadow: 0 10px 15px rgb(77, 2, 13); /* Gölgeleme ekler */
+    border: 2px solid #c2c2c2; /* Kenarlık ekler */
+    padding: 1rem 4rem 2rem 1rem; /* İç boşluk ekler */
+    background-size: cover; /* Arka plan resmi tam kaplar */
+    background-position: center; /* Arka planı merkeze yerleştirir */
+    border-radius: 1rem; /* Kenarları yuvarlatır */
+    transition: transform 0.3s; /* Transformasyon geçişini yavaşlatır */
+}
+
+/* Hover efekti */
+.suggestion-content .item:hover {
+    transform: scale(1.07); /* Öğeyi büyütür */
+    cursor: pointer; /* Fare simgesini işaretçi yapar */
+}
+
+/* Belirli item'ler için arka plan resimlerini ayarlama */
+.suggestion-row .item:nth-child(1) { background-image: url("/src/images/blacklist.jpg"); color: #fff}
+.suggestion-row .item:nth-child(2) { background-image: url("/src/images/breakingBad.jpeg"); color: #fff }
+.suggestion-row .item:nth-child(3) { background-image: url("/src/images/narcosposter.jpg"); color: #fff}
+
+.suggestion-row  .suggestion-row .item:nth-child(1) { background-image: url("/src/images/friendsposter.webp");color: #fff }
+.suggestion-row  .suggestion-row .item:nth-child(2) { background-image: url("/src/images/brooklynposter.webp"); color: #fff}
+.suggestion-row  .suggestion-row .item:nth-child(3) { background-image: url("/src/images/thebigbangposter.webp"); color: #fff}
+
+
+
+/* .suggestion-row .item */
+.suggestion-row .item {
+    position: relative; /* Öğenin konumunu daha hassas ayarlamak için */
+    background-size: cover; /* Arka planı kapsayacak şekilde resmin boyutlandırılması */
+    background-position: center; /* Arka planın ortalanması */
+    color: #fff; /* Yazı rengi beyaz */
+}
+
+/* .suggestion-row .item::before */
+.suggestion-row .item::before {
+    content: ""; /* İçeriği boş bırakıyoruz, sadece stil vermek için kullanılıyor */
+    position: absolute; /* Mutlak pozisyon, öğenin üzerine yerleştirileceği için */
+    top: 0;
+    left: 0;
+    width: 100%; /* Tam genişlik */
+    height: 100%; /* Tam yükseklik */
+    background-color: rgba(0, 0, 0, 0.7); /* Siyah bir renk (yarı saydam) */
+    z-index: 1; /* Diğer öğelerden önce gelmesi için */
+}
+
+/* .suggestion-row .item > * */
+.suggestion-row .item > * {
+    position: relative; /* Alt öğelerin de üstte görünmesi için */
+    z-index: 2; /* Öne çıkması için */
+}
+
+/* .suggestion-content .item > div:last-child */
+.suggestion-content .item > div:last-child {
+    margin-top: auto; /* Alt tarafa yaslama */
+    text-align: center; /* İçeriği ortalama */
+    padding: 0.5rem; /* İç boşluk */
+    background-color: red; /* Arka plan kırmızı */
+    color: white; /* Yazı rengi beyaz */
+    padding: 5px 10px;
+    font-size: 1rem; /* Yazı büyüklüğü */
+    border: none;
+    border-radius: 10px; /* Yuvarlatılmış köşeler */
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    width: fit-content; /* İçeriğe göre genişlik */
+}
+
+/* .benefits */
+.benefits {
+    display: flex; /* Esnek düzen */
+    justify-content: space-around; /* Öğeleri etrafında eşit şekilde dağıt */
+    color: white; /* Yazı rengi beyaz */
+    gap: 4rem; /* Öğeler arasındaki boşluk */
+    margin-top: 5rem; /* Üstten boşluk */
+}
+
+/* .benefits h2 */
+.benefits h2 {
+    font-size: 32px; /* Başlık font büyüklüğü */
+    text-align: center; /* Ortalanmış yazı */
+    margin-bottom: 40px; /* Alt boşluk */
+}
+
+/* .benefits-list */
+.benefits-list {
+    display: flex; /* Esnek düzen */
+    justify-content: space-between; /* Öğeleri aralarına boşluk bırakarak düzenle */
+    gap: 30px; /* Öğeler arasındaki boşluk */
+    max-width: 1200px; /* Maksimum genişlik */
+    margin: 0 auto; /* Ortalamak için */
+}
+
+/* .benefit-item */
+.benefit-item {
+    background: linear-gradient(10deg, rgb(94, 5, 5) 0%, rgba(177,12,12,1) 50%, rgba(0,0,0,1) 100%); /* Arka plan için renk gradyanı */
+    box-shadow: 0 10px 15px rgb(77, 2, 13); /* Gölgeleme efekti */
+    padding: 20px; /* İç boşluk */
+    border-radius: 10px; /* Yuvarlak köşeler */
+    width: 24%; /* Öğenin genişliği */
+    text-align: center; /* Ortalanmış yazı */
+    transition: transform 0.3s; /* Efekt geçişi */
+}
+
+/* .benefit-item:hover */
+.benefit-item:hover {
+    transform: scale(1.1); /* Hover etkisiyle öğeyi büyütme */
+    cursor: pointer; /* İmleç el şekline dönüşür */
+}
+
+/* .benefit-item h3 */
+.benefit-item h3 {
+    font-size: 20px; /* Başlık font büyüklüğü */
+    margin-bottom: 10px; /* Alt boşluk */
+}
+
+/* .benefit-item p */
+.benefit-item p {
+    font-size: 14px; /* Yazı font büyüklüğü */
+    color: #bbb; /* Yazı rengi gri */
+}
+
+/* .container2 */
+.container2 {
+    width: 70%; /* Genişlik */
+    margin: 0 auto; /* Ortalamak için */
+    padding: 20px; /* İç boşluk */
+}
+
+/* .container2 .benefits2-list */
+.container2 .benefits2-list {
+    display: flex; /* Esnek düzen */
+    flex-direction: column; /* Dikey düzen */
+    gap: 20px; /* Öğeler arasındaki boşluk */
+}
+
+/* .container2 .benefit-item */
+.container2 .benefit-item {
+    display: flex; /* Esnek düzen */
+    align-items: center; /* Dikeyde ortalama */
+    padding: 15px; /* İç boşluk */
+    border: 1px solid #ddd; /* Sınır */
+    border-radius: 8px; /* Yuvarlak köşeler */
+    background-color: #f9f9f9; /* Arka plan rengi */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Gölgeleme efekti */
+    width: 100%; /* Genişlik */
+    box-sizing: border-box; /* Kutunun genişliğini içeriğe göre ayarlama */
+    margin-left: 10px; /* Sol boşluk */
+    cursor: pointer; /* İmleç değişir */
+    position: relative; /* Diğer öğelere göre konumlandırma */
+    outline: none; /* Kenarlık gizleme */
+}
+
+/* .container2 .benefit-item p, h3, i */
+.container2 .benefit-item p,
+.container2 .benefit-item h3,
+.container2 .benefit-item i {
+    margin-left: 10px; /* Sol boşluk */
+    color: white; /* Yazı rengi beyaz */
+}
+
+/* .container2 .benefit-item .fa-plus-circle */
+.container2 .benefit-item .fa-plus-circle {
+    position: absolute; /* Pozisyonu mutlak */
+    right: 15px; /* Sağda yerleştir */
+    top: 50%; /* Yükseklik ortalama */
+    font-weight: 900; /* Kalın yazı tipi */
+    transform: translateY(-50%); /* Dikeyde tam ortalama */
+    cursor: pointer; /* İmleç el şekline dönüşür */
+}
+
+/* .container2 .benefit-detail */
+.container2 .benefit-detail {
+    display: none; /* Varsayılan olarak gizli */
+    margin-top: 10px; /* Üst boşluk */
+    line-height: 1.6; /* Satır yüksekliği */
+    padding-left: 30px; /* Sol iç boşluk */
+    padding-right: 30px; /* Sağ iç boşluk */
+}
+
+/* .container2 .benefit-item:focus-within .benefit-detail */
+.container2 .benefit-item:focus-within .benefit-detail {
+    display: block; /* Odaklanıldığında detayları göster */
+}
+
+/* .footer-request */
+.footer-request {
+    display: flex; /* Esnek düzen */
+    flex-direction: column; /* Dikey düzen */
+    justify-content: center; /* Ortalanmış içerik */
+    align-items: center; /* Ortalanmış içerik */
+    text-align: center; /* Ortalanmış yazı */
+    margin-top: 4rem; /* Üst boşluk */
+    color: white; /* Yazı rengi beyaz */
+    font-size: 1.5rem; /* Yazı büyüklüğü */
+}
+
+/* .email-input-container */
+.email-input-container {
+    display: flex; /* Esnek düzen */
+    align-items: center; /* Dikeyde ortalama */
+    border: 1px solid red; /* Kırmızı sınır */
+    padding: 5px 10px; /* İç boşluk */
+    border-radius: 5px; /* Yuvarlatılmış köşeler */
+    width: 500px; /* Genişlik */
+}
+
+/* .footer-request .join-button */
+.footer-request .join-button {
+    margin-left: 10px; /* Sol boşluk */
+    padding: 12px 25px; /* İç boşluk */
+    background-color: red; /* Arka plan rengi kırmızı */
+    color: white; /* Yazı rengi beyaz */
+    font-size: 12px; /* Yazı büyüklüğü */
+    border: none; /* Kenarlık yok */
+    border-radius: 30px; /* Yuvarlatılmış köşeler */
+    cursor: pointer; /* İmleç el şekline dönüşür */
+    transition: background-color 0.3s ease; /* Geçiş efekti */
+    text-align: center; /* Ortalanmış yazı */
+}
+
+/* .footer-request .join-button:hover */
+.footer-request .join-button:hover {
+    background-color: white; /* Hover durumunda arka plan beyaz */
+    color: red; /* Yazı rengi kırmızı */
+}
+
+/* .email-input-container input */
+.email-input-container input {
+    border: 0.5px solid red; /* Kırmızı sınır */
+    outline: none; /* Kenarlık gizleme */
+    flex-grow: 1; /* İçeriği genişletme */
+    padding: 5px; /* İç boşluk */
+    height: 30px; /* Yükseklik */
+}
+
+/* .email-input-container i */
+.email-input-container i {
+    color: #999; /* Renk gri */
+    margin-left: 15px; /* Sol boşluk */
+}
+
+/* .footer-content */
+.footer-content {
+    display: flex; /* Esnek düzen */
+    justify-content: space-between; /* Öğeleri aralarına boşluk bırakacak şekilde yerleştir */
+    align-items: center; /* Dikeyde ortalama */
+    color: white; /* Yazı rengi beyaz */
+    gap: 10rem; /*
+
+
+.footer-content > div {
+    flex: 1; /* Her bir div'in esnek olarak büyümesini sağlamak */
+    text-align: center; /* Div içeriğini merkeze hizalamak */
+}
+
+.footer-content nav {
+    display: flex; /* İçeriği yan yana dizmek için flexbox kullanmak */
+    margin-top: 1rem; /* Üstten 1rem boşluk bırakmak */
+    gap: 1rem; /* Öğeler arasına 1rem boşluk bırakmak */
+    margin-top: 2rem; /* Üstten ek 2rem boşluk bırakmak */
+}
+
+.footer-content nav a {
+    font-size: 1rem; /* Bağlantı metin boyutunu 1rem yapmak */
+    text-decoration: none; /* Alt çizgiyi kaldırmak */
+    color: white; /* Bağlantı rengini beyaz yapmak */
+    cursor: pointer; /* Fareyle üzerine gelince işaretçi göstermeyi sağlamak */
+    gap: 1rem; /* Öğeler arasına 1rem boşluk bırakmak */
+}
+
+footer nav a:hover {
+    color: red; /* Bağlantı üzerine gelindiğinde rengini kırmızı yapmak */
+}
+
+footer i {
+    font-size: 1rem; /* Icon boyutunu 1rem yapmak */
+    color: black; /* Icon rengini siyah yapmak */
+    margin: 5px; /* Icon'a 5px dış boşluk vermek */
+}
+
+footer i:hover {
+    cursor: pointer; /* Icon üzerine gelindiğinde işaretçi görünmesi */
+    color: red; /* Icon üzerine gelindiğinde rengini kırmızı yapmak */
+}
+
+.copyright {
+    margin-top: 10px; /* Üstten 10px boşluk bırakmak */
+    font-size: 1rem; /* Yazı boyutunu 1rem yapmak */
+    color: white; /* Yazı rengini beyaz yapmak */
+    padding: 10px; /* 10px iç boşluk vermek */
+    padding-right: 0px; /* Sağdan iç boşluğu sıfırlamak */
+}
+
+.footer-content i {
+    color: #c2c2c2; /* Icon rengini gri yapmak */
+    display: inline-block; /* Icon'u inline-block olarak düzenlemek */
+    width: 24px; /* Icon genişliğini 24px yapmak */
+    height: 24px; /* Icon yüksekliğini 24px yapmak */
+    margin: 5px; /* Icon'a 5px dış boşluk vermek */
+}
+
+.footer-language {
+    display: inline-block; /* Dil seçme bölümünü inline-block yaparak sıralamak */
+}
+
+#language-select {
+    background-color: red; /* Arkaplan rengini kırmızı yapmak */
+    color: white; /* Yazı rengini beyaz yapmak */
+    border: none; /* Kenarlığı kaldırmak */
+    padding: 5px 10px; /* 5px üst alt, 10px sağ sol iç boşluk eklemek */
+    font-size: 16px; /* Yazı boyutunu 16px yapmak */
+    cursor: pointer; /* Fare ile üzerine gelindiğinde işaretçi görünmesi */
+    transition: all 0.3s ease; /* Tüm özelliklerin 0.3 saniyede geçiş yapmasını sağlamak */
+    border-radius: 30px; /* Köşeleri yuvarlamak */
+}
+
+#language-select:hover {
+    background-color: white; /* Üzerine gelindiğinde arka plan rengini beyaz yapmak */
+    color: red; /* Yazı rengini kırmızı yapmak */
+}
+
+@media screen and (max-width: 700px) {
+    /* Ekran genişliği 700px'den küçük olduğunda uygulanacak stil */
+
+    header {
+        display: flex; /* Header içeriğini flexbox ile düzenlemek */
+        flex-direction: column; /* Elemanları dikey sıraya yerleştirmek */
+        justify-content: center; /* İçeriği merkeze hizalamak */
+        flex-wrap: nowrap; /* Elemanların taşmaması için wrap kullanmamak */
+        align-items: flex-start; /* İçeriği sol tarafta hizalamak */
+    }
+
+    .flex {
+        display: flex; /* Flexbox düzeni kullanmak */
+        justify-content: space-around; /* Elemanlar arasında boşluk bırakmak */
+        width: 100%; /* Genişliği %100 yapmak */
+        margin-left: 0 !important; /* Sol margin'i sıfırlamak */
+        gap: 0; /* Öğeler arasındaki boşluğu sıfırlamak */
+        margin-top: 20px; /*yukardan boşluk bırakmak*/
+    }
+
+    .item {
+        flex: 1 1 calc(50% - 20px); /* Öğeleri %50 genişlikte tutmak, 20px boşluk bırakmak */
+        padding: 10px; /* İçeriğe 10px padding eklemek */
+    }
+
+    .search {
+        display: flex; /* Flexbox düzeni kullanmak */
+        justify-content: baseline !important; /* Yatayda hizalamak */
+        gap: 0; /* Öğeler arasındaki boşluğu sıfırlamak */
+        margin-left: 100px; /* Sol taraftan 100px boşluk bırakmak */
+        position: absolute; /* Konumu mutlak yapmak */
+    }
+
+    .bell {
+        margin-right: 60px; /* Sağdan 60px boşluk bırakmak */
+        position: absolute; /* Konumu mutlak yapmak */
+    }
+
+    .right {
+        display: flex; /* Flexbox düzeni kullanmak */
+        justify-content: center; /* İçeriği yatayda merkeze hizalamak */
+        gap: 0 !important; /* Öğeler arasındaki boşluğu sıfırlamak */
+    }
+
+    .benefits-list {
+        display: flex; /* Flexbox düzeni kullanmak */
+        flex-wrap: wrap; /* Öğeleri sararak düzenlemek */
+        justify-content: space-between; /* Öğeler arasında boşluk bırakmak */
+    }
+
+    .benefit-item {
+        width: 37%; /* Elemanları %37 genişlikte tutmak */
+        margin-bottom: 20px; /* Alt kısımda 20px boşluk bırakmak */
+    }
+
+    .footer-request {
+        padding: 0; /* Padding'i sıfırlamak */
+        margin: 0; /* Margin'i sıfırlamak */
+    }
+
+    .footer-request p {
+        margin-bottom: 5px; /* Alt kısımda 5px boşluk bırakmak */
+    }
+
+    .email-input-container {
+        display: flex; /* Flexbox düzeni kullanmak */
+        justify-content: center; /* İçeriği yatayda merkeze hizalamak */
+        width: 60vw; /* Genişliği %60 yapmak */
+        margin-right: 80px; /* Sağdan 80px boşluk bırakmak */
+        margin-bottom: 50px; /* Alt kısımda 50px boşluk bırakmak */
+    }
+
+    .footer-request .join-button {
+        margin-top: 100px; /* Üstten 100px boşluk bırakmak */
+        width: 30%; /* Genişliği %30 yapmak */
+        height: 40px; /* Yüksekliği 40px yapmak */
+    }
+
+    .footer-language {
+        visibility: hidden; /* Dil seçme butonunu gizlemek */
+    }
+
+    .footer-content {
+        display: flex; /* Flexbox düzeni kullanmak */
+        flex-direction: column; /* Elemanları dikey sıraya yerleştirmek */
+        justify-content: center; /* İçeriği merkeze hizalamak */
+        align-items: center; /* İçeriği yatayda merkeze hizalamak */
+        text-align: center; /* Metni merkeze hizalamak */
+        gap: 0px; /* Öğeler arasındaki boşluğu sıfırlamak */
+        margin-top: 0; /* Üstten boşluk bırakmamak */
+    }
+}
+
+
+

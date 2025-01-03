@@ -4,28 +4,321 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/css/style.css">
-    <link rel="stylesheet" href="./src/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <title>WitFlix</title>
 </head>
 <body>
-    <div class="wrap">
-    <header>
-        <img src="./src/images/WitFlix.png" alt="Witflix Logo" class="logo">
-        <nav>
-        <a href="">Topic 1</a>
-        <a href="">Topic 2</a>
-        <a href="">Topic 3</a>
-        <a href="">Topic 4</a>
-    </nav> 
-    <div class="search">
-        <input type="text" placeholder="Search">
-        <i class="fa-regular fa-bell"></i>
-        <img src="" alt="Profil Resmi" class="profile">
+    <div id="wrap">
+        <header class="flex">
+            <img src="./src/images/WitFlix.png" alt="Witflix Logo" class="logo">
+            
+            <nav class="flex">
+                <a href="">HOME</a>
+                <a href="">SERIES</a>
+                <a href="">FILMS</a>
+                <a href="">RECENTLY ADDED</a>
+                <a href="">MY LIST</a>
+            </nav>
+            
+            <div class="right flex">
+                <div class="search">
+                    <input type="text" placeholder="Search">
+                    <i class="search fa-solid fa-search"></i>
+                </div>
+                <div class="profile flex">
+                    <i class="bell fa-solid fa-bell"></i>
+                    <img src="/src/images/pp.jpg" alt="Profil Resmi" class="profile">
+                </div>
+            </div>    
+        </header>
     </div>
-    </header>
-    <main></main>
-    <section></section>
-    <footer></footer>
-</div>
+    
+  
+    <main>
+        <div class="hero-content">
+            <h1>GAME OF THRONES</h1>
+                <div class="movie-info">
+                    <div class="user-ratings">
+                        <span class="user-ratings">
+                            <i class="fa-solid fa-star" style="color:red"></i>
+                            <i class="fa-solid fa-star"style="color:red"></i>
+                            <i class="fa-solid fa-star"style="color:red"></i>
+                            <i class="fa-solid fa-star"style="color:red"></i>
+                            <i class="fa-solid fa-star"style="color:red"></i>
+                        </span>
+                        <span class="imdb-rating">9.8 IMDB</span>
+                        <span class="maturity-rating">18+</span>
+                        <span class="duration">8 SEASONS 73 EPISODES</span>
+                    </div>
+                </div>
+                    <p>Game of Thrones is a globally acclaimed series based on George R.R. Martin's novel series "A Song of Ice and Fire." It brings to life the political intrigues, power struggles, and fantastical elements of the Seven Kingdoms. Originally aired by HBO, this epic production introduces viewers to the captivating and perilous world of Westeros. Known for its complex characters, unpredictable plot twists, and high production quality, Game of Thrones has won numerous awards. While not available on Witflix, it serves as a benchmark for fans seeking similar epic stories on the platform.</p>
+                        <ul class="movie-details">
+                            <li><span>Starring:</span> Emilia Clarke - Kit Harington - Lena Headey - Peter Dinklage</li>
+                            <li><span>Genre:</span> Fantasy - Drama - Action - Adventure</li>
+                            <li><span>Tags:</span> Epic Battles - Dragons - War and Strategy</li>
+                        </ul>
+                    <div class="btn-container">
+                        <div class="btn">
+                            <i class="fas fa-play"></i>
+                            <span class="play-text">Play Now</span>
+                        </div>
+                        <div class="btn">
+                            <i class="fas fa-plus"></i>
+                            <span class="play-text">Listem</span>
+                        </div>
+                     </div>   
+        </div>
+    </main>
+
+    <section>
+        <div class="suggestion-row">
+            <div class="s-header">
+                <h2>Popular Series</h2>
+                <a href="">View All</a>
+            </div>
+            <div class="suggestion-content">
+                 <div class="item">
+                    <h3>THE BLACKLIST</h3>  
+                    <div class="suggestion-details">
+                        <span>
+                            <i class="fa-solid fa-star" style="color:red"></i>
+                            <i class="fa-solid fa-star"style="color:red"></i>
+                            <i class="fa-solid fa-star"style="color:red"></i>
+                            <i class="fa-solid fa-star"style="color:red"></i>
+                            <i class="fa-solid fa-star"style="color:red"></i>
+                        </span>
+                        <div>
+                            <span class="imdb-rating">8.0 IMDB</span>
+                            <span class="maturity-rating">16+</span>
+                            <span class="duration">10 SEASONS 197 EPISODES</span>
+                        </div>     
+                    </div>
+                    <div>Play Now</div>
+                </div>
+                <div class="item">
+                    <h3>BREAKING BAD</h3>
+                    <div class="suggestion-details">
+                        <span>
+                            <i class="fa-solid fa-star" style="color:red"></i>
+                            <i class="fa-solid fa-star"style="color:red"></i>
+                            <i class="fa-solid fa-star"style="color:red"></i>
+                            <i class="fa-solid fa-star"style="color:red"></i>
+                            <i class="fa-solid fa-star"style="color:red"></i>
+                        </span>
+                        <div> 
+                            <span class="imdb-rating">9.5 IMDB</span>
+                        <span class="maturity-rating">18+</span>
+                        <span class="duration">5 SEASONS 62 EPISODES</span>
+                        </div>
+                       
+                    </div>
+                    <div>Play Now</div>
+                </div> 
+                <div class="item">
+                    <h3>NARCOS</h3>
+                    <div class="suggestion-details">
+                        <span>
+                            <i class="fa-solid fa-star" style="color:red"></i>
+                            <i class="fa-solid fa-star"style="color:red"></i>
+                            <i class="fa-solid fa-star"style="color:red"></i>
+                            <i class="fa-solid fa-star"style="color:red"></i>
+                            <i class="fa-solid fa-star"style="color:red"></i>
+                        </span>
+                        <div>
+                            <span class="imdb-rating">8.8 IMDB</span>
+                            <span class="maturity-rating">16+</span>
+                            <span class="duration">3 SEASONS 30 EPISODES</span>
+                        </div>
+                        
+                    </div>
+                    <div>Play Now</div>
+                </div>  
+        </div>
+
+        <div class="suggestion-row">
+            <div class="s-header">
+                <h2>Recommended For You</h2>
+                <a href="">View All</a>
+            </div>
+            <div class="suggestion-content">
+                 <div class="item">
+                    <h3>FRIENDS</h3>  
+                    <div class="suggestion-details">
+                        <span>
+                            <i class="fa-solid fa-star" style="color:red"></i>
+                            <i class="fa-solid fa-star"style="color:red"></i>
+                            <i class="fa-solid fa-star"style="color:red"></i>
+                            <i class="fa-solid fa-star"style="color:red"></i>
+                            <i class="fa-solid fa-star"style="color:red"></i>
+                        </span>
+                        <div>
+                            <span class="imdb-rating">8.8 IMDB</span>
+                            <span class="maturity-rating">10+</span>
+                            <span class="duration">10 SEASONS 235 EPISODES</span>
+                        </div>     
+                    </div>
+                    <div>Play Now</div>
+                </div>
+                <div class="item">
+                    <h3>BROOKLYN NINE-NINE</h3>
+                    <div class="suggestion-details">
+                        <span>
+                            <i class="fa-solid fa-star" style="color:red"></i>
+                            <i class="fa-solid fa-star"style="color:red"></i>
+                            <i class="fa-solid fa-star"style="color:red"></i>
+                            <i class="fa-solid fa-star"style="color:red"></i>
+                            <i class="fa-solid fa-star"style="color:red"></i>
+                        </span>
+                        <div> 
+                            <span class="imdb-rating">8.5 IMDB</span>
+                        <span class="maturity-rating">16+</span>
+                        <span class="duration">8 SEASONS 153 EPISODES</span>
+                        </div>
+                       
+                    </div>
+                    <div>Play Now</div>
+                </div> 
+                <div class="item">
+                    <h3>THE BIG BANG THEORY</h3>
+                    <div class="suggestion-details">
+                        <span>
+                            <i class="fa-solid fa-star" style="color:red"></i>
+                            <i class="fa-solid fa-star"style="color:red"></i>
+                            <i class="fa-solid fa-star"style="color:red"></i>
+                            <i class="fa-solid fa-star"style="color:red"></i>
+                            <i class="fa-solid fa-star"style="color:red"></i>
+                        </span>
+                        <div>
+                            <span class="imdb-rating">8.8 IMDB</span>
+                            <span class="maturity-rating">16+</span>
+                            <span class="duration">12 SEASONS 280 EPISODES</span>
+                        </div>
+                        
+                    </div>
+                    <div>Play Now</div>
+                </div>  
+        </div>
+    </section>
+
+    <section class="benefits">
+        <div class="container">
+          <h2>Bize Katılmanızın Kazanımları</h2>
+          <div class="benefits-list">
+            <div class="benefit-item">
+                <i class="fas fa-plus-circle"></i>
+              <h3>Daha Fazla İçerik</h3>
+              <p>Sürekli yeni dizi ve filmler ekleniyor.</p>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-tv"></i> 
+              <h3>Sınırsız İzleme</h3>
+              <p>Dilediğiniz zaman, istediğiniz yerde izleyebilirsiniz.</p>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-mobile-alt"></i>
+              <h3>Farklı Cihazlardan Erişim</h3>
+              <p>Bilgisayar, telefon, tablet ve TV üzerinden izleme imkanı.</p>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-gift"></i> 
+              <h3>Özel İçerikler</h3>
+              <p>Sadece üyelere özel içerikler.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="benefits">
+        <div class="container2">
+            <h2>Sıkça Sorulan Sorular</h2>
+            <div class="benefits2-list">
+                <div class="benefit-item" tabindex="0">
+                    <i class="fas fa-question-circle"></i>
+                    <h3>WitFlix nedir?</h3>
+                    <i class="fas fa-plus-circle"></i>
+                    <p class="benefit-detail">Witflix; internet bağlantılı binlerce cihazda ödüllü diziler, filmler, animeler, belgeseller ve daha fazlasını içeren geniş bir arşiv sunan bir streaming hizmetidir. Tek bir reklam olmadan, istediğiniz kadar, istediğiniz zaman izleyebilirsiniz - hepsi aylık düşük bir ücret karşılığında. Her zaman keşfedilecek yeni bir şeyler var, üstelik her hafta yeni diziler ve filmler ekleniyor!</p>
+                </div>
+                <div class="benefit-item" tabindex="0">
+                    <i class="fas fa-question-circle"></i>
+                    <h3>WitFlix'in maliyeti nedir?</h3>
+                    <i class="fas fa-plus-circle"></i>
+                    <p class="benefit-detail">Witflix'i akıllı telefonunuz, tabletiniz, Akıllı TV'niz, dizüstü bilgisayarınız veya yayın cihazınızda sabit bir aylık ücretle izleyin. Aylık plan ücretleri 149,99 TL ile 299,99 TL arasında değişmektedir. Ekstra maliyet yok, sözleşme yok.</p>
+                </div>
+                <div class="benefit-item" tabindex="0">
+                    <i class="fas fa-question-circle"></i>
+                    <h3>Nerede izleyebilirim?</h3>
+                    <i class="fas fa-plus-circle"></i>
+                    <p class="benefit-detail">İstediğiniz yerde, istediğiniz zaman izleyin. Bilgisayarınızda witflix.com adresinden veya akıllı TV'ler, akıllı telefonlar, tabletler, medya oynatıcılar ve oyun konsolları dâhil Witflix uygulamasını sunan, internet bağlantılı herhangi bir cihazda anında izlemek için Witflix hesabınızla oturum açın. Favori içeriklerinizi iOS veya Android uygulamasıyla da indirebilirsiniz. Seyahatteyken ve internet bağlantısı olmadan izlemek için indirilenleri kullanın. Witflix'i her yere beraberinizde götürün.</p>
+                </div>
+                <div class="benefit-item" tabindex="0">
+                    <i class="fas fa-question-circle"></i>
+                    <h3>Nasıl iptal ederim?</h3>
+                    <i class="fas fa-plus-circle"></i>
+                    <p class="benefit-detail">Witflix esnektir. Sinir bozucu hiçbir sözleşme ve taahhüt yoktur. Hesabınızı çevrimiçi olarak iki tıklamayla kolayca iptal edebilirsiniz. İptal ücreti yoktur - hesabınızı istediğiniz zaman başlatın veya durdurun.</p>
+                </div>
+                <div class="benefit-item" tabindex="0">
+                    <i class="fas fa-question-circle"></i>
+                    <h3>WitFlix'te ne izleyebilirim?</h3>
+                    <i class="fas fa-plus-circle"></i>
+                    <p class="benefit-detail">Witflix, uzun metrajlı filmler, belgeseller, diziler ve programlar, anime, ödüllü Witflix orijinal içerikleri ve daha fazlasından oluşan kapsamlı bir kütüphaneye sahiptir. İstediğiniz her zaman, istediğiniz kadar çok şey izleyin.</p>
+                </div>
+                <div class="benefit-item" tabindex="0">
+                    <i class="fas fa-question-circle"></i>
+                    <h3>WitFlix'te çocuklar için uygun mudur?</h3>
+                    <i class="fas fa-plus-circle"></i>
+                    <div class="benefit-detail">
+                        <p>Üyeliğinize dâhil olan Witflix Çocuk deneyimi, çocukların ailece izlenebilecek dizi ve filmleri kendilerine özel bir alanda izlemelerini sağlarken kontrolü ebeveynlere verir. Çocuk profillerinde bulunan PIN korumalı ebeveyn kontrolleri sayesinde, çocukların izleyebileceği içeriklerin yetişkinlik düzeylerini kısıtlayabilir ve onların görmesini istemediğiniz belirli içerikleri engelleyebilirsiniz.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+      <footer class="footer-request">
+       <p>İzlemeye hazır mısınız? Üye olmak ya da hesabınıza tekrar ulaşmak için tek yapmanız gereken e-posta adresinizi girmek.</p>
+       <div class="right flex">
+        <div class="search">
+            <div class="email-input-container">
+                <input type="email" placeholder="Enter your email" required>
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+        </div>
+        <button class="join-button">
+            Başlayın
+       </button> 
+      </footer>
+
+      <footer class="footer-language">
+        <select id="language-select">
+            <option value="tr" data-icon="🇹🇷">Türkçe</option>
+            <option value="en" data-icon="🇬🇧">English</option>
+        </select>
+    </footer>
+
+    <footer class="footer-content">
+        <div>
+            <nav>
+                <a href="">Term Of Use</a>
+                <a href="">Privacy - Policy</a>
+                <a href="">FAQ</a>
+                <a href="">Watch List</a>
+            </nav>
+
+            <p class="copyright">Copyright 2025 Tüm Hakları Saklıdır.</p>
+
+        </div>
+        <div>
+            <p>Follow Us</p>
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+        <div>
+            <p>Apps</p>
+            <i class="fab fa-apple"></i>
+            <i class="fab fa-google-play"></i>
+        </div>
+    </footer>
 </body>
 </html>
